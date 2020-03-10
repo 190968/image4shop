@@ -8,7 +8,7 @@ html
                     margin: 0;
             }
             div {
-                padding-top: 30px;
+                padding-top: 40px;
             }
             form span {
                 text-align: center;
@@ -87,6 +87,13 @@ html
                 text-align: center;
                 padding: 0 5px;
             }
+            #size {
+                width: 15%;
+                margin: 0 1%;
+                font-size: 18px;
+                text-align: center;
+                padding: 0 5px;
+            }
             input,
             select,
             .add_item {
@@ -95,6 +102,9 @@ html
                 width: 12%;
                 display: inline-block;
                 margin: 5px;
+            }
+            p.main span.size {
+                 width: 18%;
             }
             p.main .teen,
             .teen {
@@ -155,7 +165,7 @@ body
                 span model
                 span.teen gender
                 span.teen color
-                span size
+                span.size size
                 span#five cost
                 span#five sale
                 span#save save
@@ -175,7 +185,7 @@ body
                         span= i.model
                         span.teen= i.gender
                         span.teen= i.color
-                        span= i.size
+                        input#size(type="text" value=i.size name="size")
                         input#five(type="text" value=i.cost name="cost") 
                         input#five(type="text" value=i.sale name="sale")
                         button.write(type="submit" title="write to base") &#x270E;

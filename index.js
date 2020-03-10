@@ -145,7 +145,7 @@ const uri = "mongodb+srv://alex:alex@cluster0alex-mvffj.gcp.mongodb.net/my?retry
 // app.use(bodyParser.json({ inflate: true, limit: '2000kb', type: 'txt/csv'}));
 
 // write to mongodb
-app.post('/add_to_mongobase',(req,res)=>{
+app.get('/add_to_mongobase',(req,res)=>{
   Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
         if ( err ) throw err;
         var dbo = db.db("my");
@@ -155,9 +155,11 @@ app.post('/add_to_mongobase',(req,res)=>{
             dbo.collection('base').insertMany( JSON.parse(data) , (err, res)=>{
                 if ( err ) throw err;
                 console.log(`inserted: ${res.insertedCount}`);
+               
             });
         });
   });
+  
 });
 
 //read questions from mongoDB
@@ -175,7 +177,7 @@ app.get("/question",function(req,res){
 });
 
 
-//read base from mongoDB
+//read base  brand from mongoDB 
 
 app.all("/readBase",function(req,res){
   let brand = req.query.brand; 
@@ -189,7 +191,7 @@ app.all("/readBase",function(req,res){
   });
 });
 
-//add item to base
+//add one item to base
 app.get("/add_to_base_item",function(req,res){
   let id = 1000;
   let brand = req.query.brand;
@@ -268,10 +270,11 @@ app.get("/write_to_base",function(req,res){
   let brand = req.query.brand;
   let cost = req.query.cost;
   let sale = req.query.sale;
+  let size = req.query.size;
   Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
     if ( err ) throw err;
     var dbo = db.db("my");       
-    dbo.collection("base").updateOne({ "id" : +id },{$set:{"cost": +cost,"sale": +sale}},{ upsert: true },
+    dbo.collection("base").updateOne({ "id" : +id },{$set:{"size": size,"cost": +cost,"sale": +sale}},{ upsert: true },
     (err,date)=>{
       if ( err ) throw err;
       console.log(date.result.nModified);       
@@ -297,7 +300,8 @@ app.post("/uploadBase",(req,res)=>{
       if (err) {
         res.send(`<h1>${err}</h1>`)
       } else {
-        res.redirect("/");
+        
+        res.redirect("/add_to_mongobase");
       }     
     })
 
