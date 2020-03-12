@@ -148,19 +148,21 @@ const uri = "mongodb+srv://alex:alex@cluster0alex-mvffj.gcp.mongodb.net/my?retry
 // write to mongodb
 app.get('/add_to_mongobase',(req,res)=>{
   Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
-        if ( err ) throw err;
-        var dbo = db.db("my");
-          fs.readFile(path.join(__dirname,'base.json'),'utf8',(err,data)=>{
-           
+      if ( err ) throw err;
+      var dbo = db.db("my");
+      dbo.collection('base').deleteMany({},(err)=>{
+        if (err) throw err;
+        console.log("Base deleted");
+        fs.readFile(path.join(__dirname,'base.json'),'utf8',(err,data)=>{           
+          if ( err ) throw err;
+          dbo.collection('base').insertMany( JSON.parse(data) , (err, res)=>{
             if ( err ) throw err;
-            dbo.collection('base').insertMany( JSON.parse(data) , (err, res)=>{
-                if ( err ) throw err;
-                console.log(`inserted: ${res.insertedCount}`);
-               
-            });
+            console.log(`inserted: ${res.insertedCount}`);               
+          });
         });
+      });  
   });
-  
+  res.redirect("/");
 });
 
 //read questions from mongoDB
