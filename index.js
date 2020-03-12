@@ -77,7 +77,8 @@ app.get("/",function(req,res) {
     req.protocol +'://' + req.hostname; 
   let s =  fs.readdirSync((__dirname + "/items")); 
   res.render('main_page',{ folders: s, url: app.locals.url});
-});  
+}); 
+
 
 //pug CreateFolder
 app.get("/createFolder",(req,res)=>{
@@ -189,6 +190,17 @@ app.all("/readBase",function(req,res){
       res.render('base_brand',{ base:data, url:app.locals.url, brand:brand });
     });           
   });
+});
+//read orders from MongoDB
+app.get("/readOrders",function(req,res){
+  Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
+    if ( err ) throw err;
+    var dbo = db.db("my");       
+    const s = dbo.collection("orders").find().toArray((err,data)=>{
+      if ( err ) throw err;
+      res.render('orders', {data: data});       
+    });
+  }); 
 });
 
 //add one item to base

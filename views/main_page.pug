@@ -1,7 +1,9 @@
 doctype html
-html
+html(lang="en")
     head
         title my Site
+        meta(DESCRIPTION="site for worns with base")
+        meta(content="width=device-width,minimum-scale=1,initial-scale=1")
         style.
              body {
                     background-color: #ccc;
@@ -25,13 +27,13 @@ html
                 position: relative;
             }
             .menu {
-                width: 30%;
+                width: 24%;
                 text-align: center;
                 color: #fff;
                 margin: 0 1%;
                 text-decoration: none;                
                 display: inline-block;
-                font: 600 35px/30px "Arial",sans-serif;
+                font: 600 25px/30px "Arial",sans-serif;
             }
             .menu:hover {
                  color: red;   
@@ -174,7 +176,8 @@ html
                 }
             }  
     body  
-                  
+        h1 CMS for 
+            a(href="https://next-pro.19ham09.now.sh/")  ALLforRUN.by        
         form#rename(action="/rename?last=last_name" method="get")
             label Rename folder                
                 input#last_name(type="text" name="last_name")          
@@ -188,13 +191,15 @@ html
                 b ?           
             a(href= `${url}` title="only admin") yes (only admin) 
             br                
-            a(href= `${url}`) no 
+            a(href= `${url}`) no
+
                              
         div#main_block
             div#two                
                 a.menu(href = `${url}/createFolder`) create folder
                 a.menu(href = `${url}/upload_base`) upload base 
                 a.menu(href = `${url}/question`) questions 
+                a.menu(href = `${url}/readOrders`) orders 
                   
             //- h1 #{folders.length} folders
            
