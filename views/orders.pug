@@ -8,23 +8,31 @@ html(lang="en")
             body {
                     background-color: #ccc;
                     margin: 0;
+                    font-size: 16px;
                 }
-            .close {
+             .close {
                 position: fixed;
                 top: 0;
                 z-index: 20;
                 text-decoration: none;               
-                background-color: rgba(255, 255, 255);
-                padding: 15px;
+                background-color: red;
+                text-align: center;
+                height: 50px;
+                width: 50px;
+                box-sizing: border-box;
+                color: yellow;
+                font-size: 30px;
+               
             }
             .close:hover {
                  background-color: #ccc;
-            }
+            }   
             span {
                 display: inline-block;
                 width: 10%;
                 padding: 10px;
                 text-align: center;
+                font: 400 15px/15px Arial, sans-serif;
             }
             span.number {
                 width: 3%
@@ -44,11 +52,14 @@ html(lang="en")
                 position: fixed;
                 top: 50px;
                 background-color: lavender;
-                font-weight: 600;
+                
                 margin: 0;
             }
+            p.main span {
+                font: 600 18px/25px Arial, sans-serif;
+            }
             .orderDiv {
-                margin-top: 90px;
+                margin-top: 95px;
             }
 
     body 
