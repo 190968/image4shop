@@ -2523,7 +2523,7 @@
       "size":"36,37,38",
       "color":"red",
       "item":"shoes",
-      "rev":"Run faster and further than before in these adidas Lite Racer Reborn Men's Running Shoes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+      "rev":"Run faster and further than before in these Reebok Lite Racer Reborn Men's Running Shoes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
    },
    {
       "id":227,
@@ -2532,9 +2532,9 @@
       "model":"T_Shirt2",
       "gender":"women",
       "size":"8,10,12,14",
-      "color":"bedge",
+      "color":"white",
       "item":"clothing",
-      "rev":"This New Balance Impact Short Sleeve T Shirt is crafted with short sleeves and a crew neck for a classic look. It features flat lock seams to prevent chafing and is a lightweight construction. This t shirt is designed with a signature logo and is complete with New Balance branding."
+      "rev":"This Adidas Impact Short Sleeve T Shirt is crafted with short sleeves and a crew neck for a classic look. It features flat lock seams to prevent chafing and is a lightweight construction. This t shirt is designed with a signature logo and is complete with New Balance branding."
    },
    {
       "id":228,
@@ -3041,6 +3041,105 @@
       "size":"40,41,42,44,45",
       "color":"black",
       "item":"shoes",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":274,
+      "cost":9,
+      "brand":"adidas",
+      "model":"Run_It_T_Shirt",
+      "gender":"men",
+      "size":"10,12,14,16",
+      "color":"blue",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":275,
+      "cost":19,
+      "brand":"adidas",
+      "model":"Responce_T_Shirt",
+      "gender":"men",
+      "size":"8,10,12,16",
+      "color":"white",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":276,
+      "cost":23,
+      "brand":"adidas",
+      "model":"OTR_Short_T_Shirt",
+      "gender":"men",
+      "size":"8,10,12,16",
+      "color":"gray",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":278,
+      "cost":23,
+      "brand":"adidas",
+      "model":"OTR_Short_T_Shirt",
+      "gender":"men",
+      "size":"8,10,12,14",
+      "color":"navy",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":279,
+      "cost":20,
+      "brand":"adidas",
+      "model":"OTR_Short",
+      "gender":"men",
+      "size":"8,10,12,14",
+      "color":"navy",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":280,
+      "cost":26,
+      "brand":"adidas",
+      "model":"OTR_Short",
+      "gender":"men",
+      "size":"10,12",
+      "color":"BLACK",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":281,
+      "cost":36,
+      "brand":"adidas",
+      "model":"Supernova_T_Shirt",
+      "gender":"men",
+      "size":"8,12,14",
+      "color":"BLACK",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":282,
+      "cost":38,
+      "brand":"adidas",
+      "model":"Supernova_T_Shirt",
+      "gender":"men",
+      "size":"10,12,14",
+      "color":"green",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":283,
+      "cost":31,
+      "brand":"adidas",
+      "model":"Supernova_T_Shirt",
+      "gender":"men",
+      "size":"10,12,16",
+      "color":"gray",
+      "item":"clothing",
       "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
    }
 ]
