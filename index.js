@@ -123,7 +123,7 @@ app.post("/upload_image/uploadimage",(req,res)=>{
       if (err) {
         res.send(`<h1>${err}</h1>`)
       } else {
-        res.redirect("/");
+        res.redirect(`/readBase/?brand=${brand}`);
       }     
     })
   });
