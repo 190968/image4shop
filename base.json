@@ -3105,7 +3105,7 @@
       "model":"OTR_Short",
       "gender":"men",
       "size":"10,12",
-      "color":"BLACK",
+      "color":"black",
       "item":"clothing",
       "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
    },
@@ -3116,7 +3116,7 @@
       "model":"Supernova_T_Shirt",
       "gender":"men",
       "size":"8,12,14",
-      "color":"BLACK",
+      "color":"black",
       "item":"clothing",
       "rev":"Run faster and further than before in these karrimor x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
    },
@@ -3392,6 +3392,83 @@
       "gender":"men",
       "size":"10,11,12",
       "color":"blue",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":307,
+      "cost":14,
+      "brand":"puma",
+      "model":"Box_QT_T_Shirt",
+      "gender":"boy",
+      "size":"10,11,12",
+      "color":"black",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":308,
+      "cost":12,
+      "brand":"puma",
+      "model":"Box_QT_T_Shirt",
+      "gender":"boy",
+      "size":"6,8,10,11",
+      "color":"white",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":309,
+      "cost":12,
+      "brand":"puma",
+      "model":"Box_QT_T_Shirt",
+      "gender":"boy",
+      "size":"4,6,10",
+      "color":"red",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":310,
+      "cost":12,
+      "brand":"reebok",
+      "model":"Delta_Logo_T_Shirt",
+      "gender":"boy",
+      "size":"4,6,10",
+      "color":"red",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":311,
+      "cost":15,
+      "brand":"reebok",
+      "model":"Short_Logo_T_Shirt",
+      "gender":"boy",
+      "size":"4,6,10",
+      "color":"black",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":312,
+      "cost":12,
+      "brand":"reebok",
+      "model":"Short_Logo_T_Shirt",
+      "gender":"boy",
+      "size":"4,6,10",
+      "color":"white",
+      "item":"clothing",
+      "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
+   },
+   {
+      "id":313,
+      "cost":12,
+      "brand":"reebok",
+      "model":"Short_Logo_T_Shirt",
+      "gender":"boy",
+      "size":"4,6,8",
+      "color":"gray",
       "item":"clothing",
       "rev":"Run faster and further than before in these Nike x Exel T shirt Running clothes. They are with a lightweight mesh upper that hugs the foot thanks to a sock-like construction and allows for breathability. The OrthoLite Float sockliner, combined with a Cloudofam midsole & outsole offers support and bounceback with every step taken.The look is completed with iconic adidas three stripe branding."
    }
