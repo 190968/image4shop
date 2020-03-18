@@ -205,6 +205,47 @@ app.get("/readOrders",function(req,res){
   }); 
 });
 
+//add order to base MongoDB
+
+app.get("/add_to_order",function(req,res){
+  console.log("connect db");
+  let name = req.query.name;
+  let phone = req.query.phone;
+  let id = req.query.id;
+  let brand = req.query.brand;
+  let model = req.query.model;
+  let gender = req.query.gender;
+  let color = req.query.color;
+  let size = req.query.size;
+  let cost = req.query.cost;
+ 
+  Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
+    if ( err ) throw err;
+    var dbo = db.db("my");
+    var d = new Date();
+    var date = d.getFullYear() + "/" + d.getMonth() + "/" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes();   
+    var set = { 
+              "name": name,
+              "phone": phone,
+              "id" : +id ,
+              "cost": +cost,             
+              "brand": brand,
+              "model": model,
+              "gender": gender,
+              "color": color,
+              "size": size,
+              "date":  date        
+            };       
+    dbo.collection("orders").insertOne(set,(err,date)=>{
+      if ( err ) throw err;
+      console.log(`Order add to base ${date}`);       
+      res.send("Ok");
+    });           
+  });
+});
+
+
+
 //add one item to base
 app.get("/add_to_base_item",function(req,res){
   let id = 1000;
@@ -234,6 +275,7 @@ app.get("/add_to_base_item",function(req,res){
     });           
   });
 });
+
 
 //add question to mongoDB
 
