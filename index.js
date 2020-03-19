@@ -205,10 +205,25 @@ app.get("/readOrders",function(req,res){
   }); 
 });
 
+//read orders from MongoDB for user
+app.get("/readOrdersForUser",function(req,res){
+  let phone = req.query.phone;
+  let name = req.query.name; 
+  Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
+    if ( err ) throw err;
+    var dbo = db.db("my");       
+    const s = dbo.collection("orders").find({phone:phone,name:name}).toArray((err,data)=>{
+      if ( err ) throw err;
+     
+      res.send(data);       
+    });
+  }); 
+});
+
 //add order to base MongoDB
 
 app.get("/add_to_order",function(req,res){
-  console.log("connect db");
+ 
   let name = req.query.name;
   let phone = req.query.phone;
   let id = req.query.id;
@@ -216,6 +231,7 @@ app.get("/add_to_order",function(req,res){
   let model = req.query.model;
   let gender = req.query.gender;
   let color = req.query.color;
+  let quantity = req.query.quantity
   let size = req.query.size;
   let cost = req.query.cost;
  
@@ -232,13 +248,14 @@ app.get("/add_to_order",function(req,res){
               "brand": brand,
               "model": model,
               "gender": gender,
+              "quantity": quantity,
               "color": color,
               "size": size,
               "date":  date        
             };       
     dbo.collection("orders").insertOne(set,(err,date)=>{
       if ( err ) throw err;
-      console.log(`Order add to base ${date}`);       
+       
       res.send("Ok");
     });           
   });

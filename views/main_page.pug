@@ -11,13 +11,13 @@ html(lang="en")
                 }
             .rename_folders,            
             button  {
-                box-shadow: inset 0 0 5px 5px #ee82ee; 
+               
                 margin:10px 1%;
                 width: 46%;               
-                border-radius: 50px;      
+                 
                 display: inline-block;
                 text-align: center;
-                background-color: #dda0dd;               
+                background-color: #ccc;               
                 font: 600 35px/60px "Arial",sans-serif;
                 text-decoration: none;
                 color: #fff;
@@ -27,17 +27,24 @@ html(lang="en")
                 vertical-align: middle;
                 position: relative;
             }
+            .rename_folders:hover {
+                background-color: #bbb;
+                color: #000;    
+            }
+
             .menu {
                 width: 24%;
+                background-color: #ccc;   
                 text-align: center;
                 color: #fff;
                 margin: 0 1%;
+
                 text-decoration: none;                
                 display: inline-block;
-                font: 600 25px/30px "Arial",sans-serif;
+                font: 600 25px/50px "Arial",sans-serif;
             }
             .menu:hover {
-                 color: red;   
+                color: #000;   
             }
             button {
                 display: block;
@@ -60,7 +67,7 @@ html(lang="en")
                 background-color: #ddd;
                 margin: 20px auto;
                 border: 1px solid #fff;
-                padding: 20px;
+                padding: 10px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -74,7 +81,7 @@ html(lang="en")
                
                 box-sizing: border-box;                   
                 width: 48%;
-                margin: 1%;                
+                margin:0 1% ;                
                 display: inline-block;
                 text-align: right;
             }
@@ -84,6 +91,7 @@ html(lang="en")
                 height: 50px;
                 width: 50px;
                 z-index: 10;
+                color: #fff;
                 margin-left: -90px;                
                 text-align: center;
                 cursor: pointer;
@@ -92,10 +100,13 @@ html(lang="en")
                 right: 0;   
 
             }
+            span.del:hover {
+                color: #000;
+            }
             span.rename {
                  margin-right: -85px;
                  vertical-align: middle;
-                 color: green;
+                 color: #fff;
             }
             a.a_base {
                  margin-right: -85px;
@@ -103,11 +114,12 @@ html(lang="en")
                  text-decoration: none;
                  font: 800 35px/50px "Arial",sans-serif;   
                  position: relative;
-                 z-index: 10;              
+                 z-index: 10;
+                 color: #fff;              
                 
             }
             a.a_base:hover {
-               color: red;
+               color: #000;
             }
             span.rename:hover {
                color: maroon;
@@ -148,7 +160,7 @@ html(lang="en")
                 padding:0 20px;
                 border-radius: 5px;
                 margin: 10px 10px 20px;
-                color: white;
+                color: #fff;
                 background-color: blue;
                 font: 300 40px/40px "Arial",sans-serif;
             }
@@ -178,7 +190,7 @@ html(lang="en")
             }  
     body  
         h1 CMS for 
-            a(href="https://next-pro.19ham09.now.sh/")  ALLforRUN.by        
+            a(href="https://next-pro.19ham09.now.sh/")  ALLforRUN        
         form#rename(action="/rename?last=last_name" method="get")
             label Rename folder                
                 input#last_name(type="text" name="last_name")          
@@ -217,7 +229,7 @@ html(lang="en")
                         span.del(
                             title="delete folder",
                             onclick= `delete_folder(${index})` 
-                            ) &#x274C;
+                            ) &#x2715;
         
 
         
