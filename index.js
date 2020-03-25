@@ -196,6 +196,23 @@ app.all("/readBase",function(req,res){
     });           
   });
 });
+//read base   from mongoDB to shop 
+
+app.all("/readBase_to_shop",function(req,res){
+ 
+  Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
+    if ( err ) throw err;
+    var dbo = db.db("my");       
+    const s = dbo.collection("base").find({}).toArray((err,data)=>{
+      if ( err ) throw err;       
+      res.send(data);
+    });           
+  });
+});
+
+
+
+
 //read orders from MongoDB
 app.get("/readOrders",function(req,res){
   Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
