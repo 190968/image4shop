@@ -1,10 +1,13 @@
-var express = require("express");
+
 var fs = require("fs");
 var http = require("http");
 var path = require("path");
 var cors = require("cors");
+var express = require("express");
 var formidable = require("formidable");
+var csvToJson = require('convert-csv-to-json');
 var Mongoclient = require("mongodb").MongoClient;
+
 var app = express();
 var nodemailer = require('nodemailer');
 
@@ -360,26 +363,32 @@ app.get("/write_to_base",function(req,res){
 //uploadBase
 app.post("/uploadBase",(req,res)=>{  
  
-    var url =  port == 5000 ? req.protocol +'://' + req.hostname +  `:${port}`:
+  var url =  port == 5000 ? req.protocol +'://' + req.hostname +  `:${port}`:
               req.protocol +'://' + req.hostname;
  
   var form = new formidable.IncomingForm();
   form.parse(req, function (err, fields, files) {
    
     var oldpath = files.filetoupload.path;
-    var newpath = path.join( __dirname,files.filetoupload.name);
+    csvToJson.formatValueByType().getJsonFromCsv(oldpath);
 
-    fs.copyFile(oldpath, newpath, function (err) {   
-      if (err) {
-        res.send(`<h1>${err}</h1>`)
-      } else {
-        
-        res.redirect("/add_to_mongobase");
-      }     
-    })
-
+    csvToJson.generateJsonFileFromCsv(oldpath,"new.json");
+  
+    function convert() {
+      var destination = path.join( __dirname,"base.json");
+      console.log(destination);
+      var source = path.join(__dirname,"new.json");
+      fs.copyFile(source, destination, function (err) {   
+        if (err) {
+          res.send(`<h1>${err}</h1>`)
+        } else {
+          console.log("Convert complite");
+          res.redirect("/add_to_mongobase");
+        }     
+      })
+    };  
+    setTimeout(()=> convert(),1000);
   });
-
 });
 
 

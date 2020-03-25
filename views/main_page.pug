@@ -6,18 +6,15 @@ html(lang="en")
         meta(DESCRIPTION="site for works with base")
         meta(content="width=device-width,minimum-scale=1,initial-scale=1")
         style.
-             body {
-                    background-color: #ccc;
-                }
-            .rename_folders,            
-            button  {
-               
-                margin:10px 1%;
-                width: 46%;               
-                 
+            body {
+                background-color: #ccc;
+            }
+            .rename_folders,
+            button {               
+                margin:0 1%;
+                width: 66%;                
                 display: inline-block;
-                text-align: center;
-                background-color: #ccc;               
+                text-align: center;                            
                 font: 600 35px/60px "Arial",sans-serif;
                 text-decoration: none;
                 color: #fff;
@@ -25,20 +22,17 @@ html(lang="en")
                 height: 60px;
                 border: none;
                 vertical-align: middle;
-                position: relative;
-            }
+            }  
             .rename_folders:hover {
-                background-color: #bbb;
+               
                 color: #000;    
             }
-
             .menu {
-                width: 24%;
-                background-color: #ccc;   
+                width: 24.5%;
+                background-color: #ee82ee;   
                 text-align: center;
                 color: #fff;
-                margin: 0 1%;
-
+                margin: 0 0.5%;
                 text-decoration: none;                
                 display: inline-block;
                 font: 600 25px/50px "Arial",sans-serif;
@@ -51,13 +45,7 @@ html(lang="en")
                 margin: 20px auto;
                 cursor: pointer;
             }
-            button:hover {
-                border: 2px solid red;
-            }
-            .rename_folders {
-                width: 100%;
-                margin:10px 10%;
-            }           
+           
             #main_block {
                 margin: 5vw auto;
                 width: 70%;
@@ -67,7 +55,7 @@ html(lang="en")
                 background-color: #ddd;
                 margin: 20px auto;
                 border: 1px solid #fff;
-                padding: 10px;
+                padding: 10px 5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -78,47 +66,44 @@ html(lang="en")
                  background-color: #ddd;
             }         
             .one { 
-               
+                background-color: #ee82ee;
                 box-sizing: border-box;                   
                 width: 48%;
-                margin:0 1% ;                
+                margin:1% ;                
                 display: inline-block;
-                text-align: right;
+               
             }
             span.del, span.rename {               
-                font: 600 30px/50px "Arial",sans-serif;               
+                font: 400 30px/50px "Arial",sans-serif;               
                 display: inline-block;
                 height: 50px;
-                width: 50px;
-                z-index: 10;
-                color: #fff;
-                margin-left: -90px;                
+                width: 10%;               
+                color: #fff;                         
                 text-align: center;
                 cursor: pointer;
                 vertical-align: middle;
-                position: relative;
-                right: 0;   
+                
 
             }
             span.del:hover {
                 color: #000;
             }
             span.rename {
-                 margin-right: -85px;
+               
                  vertical-align: middle;
                  color: #fff;
             }
-            a.a_base {
-                 margin-right: -85px;
-                 vertical-align: middle;
-                 text-decoration: none;
-                 font: 800 35px/50px "Arial",sans-serif;   
-                 position: relative;
-                 z-index: 10;
-                 color: #fff;              
+            a.to_base {
+                width: 10%;
+                vertical-align: middle;
+                text-decoration: none;
+                font: 400 35px/50px "Arial",sans-serif;   
+                display: inline-block;    
+                color: #fff;
+                text-align: center;              
                 
             }
-            a.a_base:hover {
+            a.to_base:hover {
                color: #000;
             }
             span.rename:hover {
@@ -162,11 +147,12 @@ html(lang="en")
                 margin: 10px 10px 20px;
                 color: #fff;
                 background-color: blue;
-                font: 300 40px/40px "Arial",sans-serif;
+                font: 400 40px/40px "Arial",sans-serif;
             }
             h1 {
                text-align: center;
                width: 100%;
+               color: #fff;
             }
             @media (max-width: 1000px) {
                 a {                   
@@ -219,12 +205,12 @@ html(lang="en")
             -var one = folders          
             div#one
                 for i,index in one                    
-                    p.one    
+                    p.one
+                        a.to_base(href= `${url}/readBase/?brand=${i}`) ?      
                         span.rename(
                             title="rename folder",                            
                             onclick=`rename_folder(${index})`
-                            ) &#x270E;
-                        a.a_base(href= `${url}/readBase/?brand=${i}`) ?                                          
+                            ) &#x270E;                                                               
                         a.rename_folders(href= `${url}/items/?brand=${i}`)= i                                    
                         span.del(
                             title="delete folder",
