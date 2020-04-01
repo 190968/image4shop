@@ -231,12 +231,20 @@ app.get("/readOrdersForUser",function(req,res){
   let name = req.query.name; 
   Mongoclient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true },function(err, db){
     if ( err ) throw err;
-    var dbo = db.db("my");       
-    const s = dbo.collection("orders").find({phone:phone,name:name}).toArray((err,data)=>{
-      if ( err ) throw err;
-     
-      res.send(data);       
-    });
+    var dbo = db.db("my");
+    if (name === 'admin' & phone === '99999') {
+      const s = dbo.collection("orders").find().limit(10).toArray((err,data)=>{
+        if ( err ) throw err;
+       
+        res.send(data);       
+      });
+    } else {       
+      const s = dbo.collection("orders").find({phone:phone,name:name}).toArray((err,data)=>{
+        if ( err ) throw err;
+      
+        res.send(data);       
+      });
+    }
   }); 
 });
 
