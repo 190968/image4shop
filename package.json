@@ -16,7 +16,7 @@
     "formidable": "^1.2.1",
     "googleapis": "^39.2.0",
     "mongodb": "^3.5.4",
-    "nodemailer": "^6.4.4",
+    "nodemailer": "^6.4.16",
     "pug": "^2.0.4"
   }
 }
