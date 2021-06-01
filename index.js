@@ -40,12 +40,12 @@ app.get("/send_answer",(req,res)=>{
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: '19ham09@gmail.com',
+      user: 'aaaa@gmail.com',
       pass: pass
     }
   });
   var mailOptions = {
-    from: '19ham09@gmail.com',
+    from: 'aaaaa@gmail.com',
     to: email,
     subject: 'This is answer from ALLforRUN.by',
     text: `<h1>Hello ${name} this is ALLforRUN.by. This is my answer ${answer} </h1>`
